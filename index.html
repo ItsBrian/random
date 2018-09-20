@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+#full {
+    margin: auto;
+    width: 60%;
+}
+
+#full {animation: full 10s; animation-iteration-count: infinite;}
+
+@keyframes full { 00%    { transform: translate(20px, 30px) rotate(180deg) scale(0);}
+                 25%    { transform: translate(20px, 30px) rotate(0deg) scale(1);}
+                 50%    { transform: translate(20px, 30px) rotate(0deg) scale(1);}
+                 75%    { transform: translate(20px, 30px) rotate(0deg) scale(1);}
+                 100%    { transform: translate(20px, 30px) rotate(180deg) scale(0);}}
+                 
+
+#legL {animation: legL 10s; animation-iteration-count: infinite;}
+#legR {animation: legR 10s; animation-iteration-count: infinite;}	
+#armL {animation: armL 10s; animation-iteration-count: infinite; transform-origin: center top;}
+#armR {animation: armR 10s; animation-iteration-count: infinite; transform-origin: center top;}
+#body {animation: body 10s; animation-iteration-count: infinite;}
+#head {animation: head 10s; animation-iteration-count: infinite; transform-origin: center bottom;}
+
+@keyframes legL { 00%    { transform: translate(101px, -225px) rotate(5deg);}
+                 100%    { transform: translate(101px, -225px) rotate(5deg);}}
+
+@keyframes legR { 00%    { transform: translate(138px, -355px) rotate(-5deg);}
+                 50%    { transform: translate(138px, -355px) rotate(-5deg);}
+                 100%    { transform: translate(138px, -355px) rotate(-5deg);}}
+
+@keyframes armL { 00%    { transform: translate(80px, -120px) rotate(15deg);}
+                 24%    { transform: translate(80px, -120px) rotate(15deg);}
+                 25%    { transform: translate(80px, -120px) rotate(-140deg);}
+                 50%    { transform: translate(80px, -120px) rotate(-140deg);}
+                 74%    { transform: translate(80px, -120px) rotate(-140deg);}
+                 75%    { transform: translate(80px, -120px) rotate(15deg);}
+                100%    { transform: translate(80px, -120px) rotate(15deg);}}
+
+@keyframes armR { 00%    { transform: translate(160px, -230px) rotate(-15deg);}
+                 24%    { transform: translate(160px, -230px) rotate(-15deg);}
+                 25%    { transform: translate(160px, -230px) rotate(-130deg);}
+                 50%    { transform: translate(160px, -230px) rotate(-130deg);}
+                 74%    { transform: translate(160px, -230px) rotate(-130deg);}
+                 75%    { transform: translate(160px, -230px) rotate(-15deg);}
+                 100%    { transform: translate(160px, -230px) rotate(-15deg);}}
+
+@keyframes body { 00%    { transform: translate(100px, 0px) rotate(0deg);}
+                 100%    { transform: translate(100px, 0px) rotate(0deg);}}
+
+@keyframes head { 00%    { transform: translate(110px, -3px) rotate(0deg);}
+                 24%    { transform: translate(110px, -3px) rotate(0deg);}
+                 25%    { transform: translate(110px, -3px) rotate(-10deg);}
+                 50%    { transform: translate(110px, -3px) rotate(-10deg);}
+                 74%    { transform: translate(110px, -3px) rotate(-10deg);}
+                 75%    { transform: translate(110px, -3px) rotate(0deg);}
+                 100%    { transform: translate(110px, -3px) rotate(0deg);}}
+
+</style>
+<body style="width:90%;"><div id="full">
+
+<div id="head" style="background-color:gray;width:45px;height:45px;"></div>
+<div id="body" style="background-color:black;width:65px;height:130px;"></div>
+<div id="armL" style="background-color:blue;width:25px;height:110px;"></div>
+<div id="armR" style="background-color:orange;width:25px;height:110px;"></div>
+<div id="legL" style="background-color:red;width:25px;height:130px;"></div>
+<div id="legR" style="background-color:green;width:25px;height:130px;"></div>
+<h1 style="transform: translate(100px, -300px);">YEET</h1>
+</div>
+</body>
+
+</html>

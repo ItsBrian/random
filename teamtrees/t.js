@@ -11,7 +11,7 @@
             
 currentTreecount = +0;
 function getData(){
-  $.ajax({url: 'https://teamtrees.org/', success: function(data){
+  $.ajax({url: 'https://teamtrees.org/?source=ItsBrian.github.io', success: function(data){
       lastTreecount = currentTreecount
       currentTreecount = data.split('data-count="')[1].split('">0</div>')[0];
       currentTreecountFormatted = currentTreecount.replace(/\B(?=(\d{3})+(?!\d))/g, ",")

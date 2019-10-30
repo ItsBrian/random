@@ -26,7 +26,7 @@ function getData(){
 
 function sendData(){
 $.ajax({
-	url: "https://discordapp.com/api/webhooks/638109717075460118/_thOrTr99hFEfnWE7o6sjlyTvc_SnZt0vV9hMnRK6ILeKwAE7GuDxQNPvzok9Wo3hrDE",
+	url: "https://discordapp.com/api/webhooks/639238791374307348/IC3nYbZvLZtsOBWbzPZrXLPjaBIomifpyWNA2fWSwUjljk2UazVwN2V9_53nXktJkBNN",
 	type: "POST",
 	contentType: "application/json;charset=utf-8",
 	origen: "localhost",

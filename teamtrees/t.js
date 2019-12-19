@@ -19,7 +19,7 @@ function getData(){
       percentageComplete = Math.floor(currentTreecount/20000000*10000)/100
       latestDonator = data.split('<strong class="">')[1].split('</strong>')[0];
       latestAmount = data.split('text-uppercase">')[6].split('</span>')[0];
-      latestImage = data.split('src="images/')[17].split('.svg">')[0];
+      latestImage = data.split('src="images/')[20].split('.svg">')[0];
       sendData();
   }});
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+	background-color: #0E0D15;
+}
+
+.cube {
+  font-size: 4em;
+  width: 2em;
+  margin: 1.5em auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-25deg) rotateY(10deg) translateX(-50%);
+  float: left;
+  position: absolute;
+  transition: transform .5s;
+  }
+
+body:hover .cube {
+	transform: rotateX(0deg) rotateY(0deg) translateX(-50%);
+}
+
+body:hover .ex12 {transform: translate(-8em,0em);}
+
+.side {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: rgba(100,100,100,1);
+  text-align: center;
+  line-height: 2em;
+  background: url("https://i.imgur.com/hFpS63U.png");
+  background-size: 2em 2em;
+}
+
+.sideT {
+  position: absolute;
+  width: 2em;
+  height: 8em;
+  background: rgba(100,100,100,1);
+  text-align: center;
+  line-height: 8em;
+  background: url("https://i.imgur.com/hFpS63U.png");
+  background-size: 2em 2em;
+}
+
+.sideB {
+  position: absolute;
+  width: 6em;
+  height: 2em;
+  background: rgba(100,100,100,1);
+  text-align: center;
+  line-height: 8em;
+  background: url("https://i.imgur.com/hFpS63U.png");
+  background-size: 2em 2em;
+}
+
+.ex12 {transform: translate(-8em,0.5em);transition: transform .5s;}
+
+.front {transform: translateZ(1em);}
+.top {transform: rotateX(90deg) translateZ(1em);}
+.right {transform: rotateY(90deg) translateZ(1em);}
+.left {transform: rotateY(-90deg) translateZ(1em);}
+.bottom {transform: rotateX(-90deg) translateZ(1em);}
+.back {transform: rotateY(-180deg) translateZ(1em);}
+
+.mainHolder {
+      left: 50%;
+	position: absolute;
+    
+}
+</style>
+</head>
+<body>
+
+<div class="mainHolder">
+  <div class="ex1">
+    <div class="cube">
+    <div class="sideT front"></div>
+    <div class="sideT back"></div>
+    <div class="sideT right"></div>
+    <div class="sideT left"></div>
+    <div class="side top"></div>
+    <div class="side bottom"></div>
+    </div>
+  </div>
+
+  <div class="ex12">
+    <div class="cube">
+    <div class="sideB front"></div>
+    <div class="sideB back"></div>
+    <div class="side right"></div>
+    <div class="side left"></div>
+    <div class="sideB top"></div>
+    <div class="sideB bottom"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

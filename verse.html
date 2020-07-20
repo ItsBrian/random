@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>verse</title>
+<style>
+.poop {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+* {font-family: Arial;}
+</style>
+</head>
+<body>
+<center>
+<div class="poop">
+<p id="main"></p>
+<input id="input" placeholder="Answer"><br><br>
+<button id="confirm" onclick="submit()">Submit</button>
+<p>Scores: <br>Correst answers: <span id="crt">0</span><br>Wrong answers: <span id="wrng">0</span></p>
+</div>
+</center>
+<script>
+crrct = 0;
+wrng = 0;
+
+main = document.getElementById("main");
+input = document.getElementById("input");
+
+function newQuestion(){
+	input.value = "";
+    input.style = "background:white"
+    
+    document.getElementById("crt").innerText = crrct;
+    document.getElementById("wrng").innerText = wrng;
+    
+	rndm1 = Math.floor(Math.random()*100)
+    rndm2 = Math.floor(Math.random()*100)
+    answr = rndm1 + rndm2;
+    
+    main.innerText = `What is ${rndm1} + ${rndm2}?`
+}
+
+function submit(){
+    if (input.value == answr){
+    	main.innerText = `That's right. Good Job!`;
+        input.style = "background:#4dff4d"
+        setTimeout(()=>{
+        	++crrct;
+        	newQuestion();
+        }, 2000);
+    } else {
+    	main.innerText = `Sorry, the correct answer is ${answr}`
+        input.style = "background:#f54242"
+        setTimeout(()=>{
+            ++wrng;
+        	newQuestion();
+        }, 2000);
+    }
+}
+
+newQuestion();
+</script>
+
+</body>
+</html>
